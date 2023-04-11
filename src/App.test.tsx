@@ -9,4 +9,13 @@ describe("App test", () => {
 
         expect(screen.getByText(/Testing/i)).toBeDefined()
     })
+
+    test("Url is correct", ()=> {
+      render(<App/>);
+      
+      const linkElement = screen.getByText(/Add a test/i)
+      console.log(linkElement);
+      expect(linkElement).toBeDefined()
+    })
 })
+
